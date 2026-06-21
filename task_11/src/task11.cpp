@@ -1,6 +1,6 @@
-#include <iostream>
 #include <vector>
 #include <string>
+#include "task11.h"
 
 int find_index (std::string& S, std::string& P) {
     int sl = S.length();
@@ -37,13 +37,3 @@ int find_index (std::string& S, std::string& P) {
 }
 
 
-
-
-int main() { 
-    std::string S = "abc";
-    std::string P = "c";
-
-    int B = find_index(S, P);
-    std::cout << B << std::endl;
-    return 0; 
-}

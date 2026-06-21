@@ -71,14 +71,17 @@ public:
     }
 };
 
-int main () {
-    const std::string& A = "23";
-    KeyboardTree tree;
-    tree.build(A);
-    std::vector<std::string> result = tree.getCombinations();
-    for (const std::string& word : result) {
-        std::cout << word << " ";
+
+
+std::vector<std::string> runKeyboardTree(const std::string& digits) {
+    
+    if (digits.empty()) {
+        return {""};
     }
-    std::cout << "\n";
-    return 0;
+
+    KeyboardTree tree;
+    tree.build(digits);
+    
+    std::vector<std::string> result = tree.getCombinations();
+    return result;
 }

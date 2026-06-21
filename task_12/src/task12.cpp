@@ -1,7 +1,5 @@
-#include <iostream>
 #include <vector>
 #include <algorithm> 
-#include <functional> 
 
 int least_amount (int S, int N, std::vector<int>& values) {
     std::vector<int> amounts (S + 1, S + 10);
@@ -21,9 +19,3 @@ int least_amount (int S, int N, std::vector<int>& values) {
     return amounts[S];
 }
 
-
-
-
-int main() { 
-    return 0; 
-}

@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 
 int Select(std::vector<int>& array, int left, int right, int k) {
@@ -40,11 +39,4 @@ int K(std::vector<int>& array, int left, int right, int k) {
 }
 
 
-int main() { 
-    std::vector<int> A = {5, 48, 5976, 486, 1918, 346, 356, 57, 912, 438, 132, 376};
 
-    int d = K(A, 0, 11, 4 );
-
-    std::cout << d << std::endl;
-    return 0; 
-}

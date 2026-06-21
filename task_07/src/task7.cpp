@@ -1,4 +1,3 @@
-#include <iostream>
 #include <vector>
 
 void quickSort (std::vector<int>& array, int left, int right) {
@@ -37,14 +36,5 @@ void quickSort (std::vector<int>& array, int left, int right) {
 
 
 
-int main() { 
-    std::vector<int> A = {5, 48, 5976, 486, 1918, 346, 356, 57, 912, 438, 132, 376};
 
-    quickSort (A, 0, 11);
-
-    for (int i : A){
-        std::cout << i << ' ';
-    }
-    return 0; 
-}
 
