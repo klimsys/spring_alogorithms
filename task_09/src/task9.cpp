@@ -15,6 +15,7 @@ Node::Node(Point p, int a) {
   point = p;
   axis = a;
   left = nullptr;
+
   right = nullptr;
 }
 

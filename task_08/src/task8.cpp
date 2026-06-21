@@ -1,42 +1,39 @@
 #include <vector>
 
 int Select(std::vector<int>& array, int left, int right, int k) {
-    if (left >= right) {
-        return array[left];
+  if (left >= right) {
+    return array[left];
+  }
+
+  int i = left;
+  int j = right;
+
+  int pivot = array[(left + right) / 2];
+  while (i <= j) {
+    while (array[i] < pivot) {
+      i++;
     }
 
-    int i = left;
-    int j = right;
-
-    int pivot = array[(left + right) / 2];
-    while (i <= j) {
-        while (array[i] < pivot) {
-            i++;
-        }
-
-        while (array[j] > pivot) {
-            j--;
-        }
-
-        if (i <= j) {
-            std::swap(array[i], array[j]); 
-            i++;
-            j--;
-        }
+    while (array[j] > pivot) {
+      j--;
     }
-     
-    if (k <= j && left < j) {
-        return Select (array, left, j, k);
-    } 
-    if (k >= i && i < right) {
-        return Select(array, i, right, k);
+
+    if (i <= j) {
+      std::swap(array[i], array[j]);
+      i++;
+      j--;
     }
-    return array[k];
+  }
+
+  if (k <= j && left < j) {
+    return Select(array, left, j, k);
+  }
+  if (k >= i && i < right) {
+    return Select(array, i, right, k);
+  }
+  return array[k];
 }
 
 int K(std::vector<int>& array, int left, int right, int k) {
-    return Select(array, left, right, k - 1);
+  return Select(array, left, right, k - 1);
 }
-
-
-
