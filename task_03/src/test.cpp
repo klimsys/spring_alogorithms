@@ -5,7 +5,7 @@
 #include <string>
 #include <vector>
 
-#include "task3.h"
+#include "task3.hpp"
 
 TEST(PhoneCombinations, Example23) {
   std::string s = "23";

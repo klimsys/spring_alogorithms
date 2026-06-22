@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "task9.h"
+#include "task9.hpp"
 
 void freeTree(Node* root) {
   if (!root) return;

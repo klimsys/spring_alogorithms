@@ -1,9 +1,8 @@
-#include "task11.h"
 
 #include <string>
 #include <vector>
 
-int find_index(std::string& S, std::string& P) {
+int find_index(const std::string& S, const std::string& P) {
   int sl = S.length();
   int pl = P.length();
 

@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "task12.h"
+#include "task12.hpp"
 
 TEST(LeastAmountCoins, StandardCase) {
   std::vector<int> coins{1, 3, 4};

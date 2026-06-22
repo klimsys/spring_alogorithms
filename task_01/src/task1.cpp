@@ -1,4 +1,3 @@
-#include "task1.h"
 
 #include <vector>
 

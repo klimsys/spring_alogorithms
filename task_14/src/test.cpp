@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-#include "task14.h"
+#include "task14.hpp"
 
 TEST(HaveOrdered, AllColumnsSorted) {
   int n = 3, m = 3, k = 1;

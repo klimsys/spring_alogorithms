@@ -1,26 +1,25 @@
-#include "task6.h"
+#include "task6.hpp"
 
+#include <deque>
 #include <vector>
 
 int totalfishcost(int N, int K, std::vector<int>& fishcost) {
-  int totalcost = 0;
-  int window_start = 0;
-  int window_end = 0;
+  long long totalcost = 0;
 
-  int mincost = 0;
+  std::deque<int> window;
 
   for (int i = 0; i < N; i++) {
-    window_end = i;
-    window_start = std::max(0, i - K + 1);
-
-    mincost = fishcost[window_start];
-    for (int j = window_start; j <= window_end; j++) {
-      if (fishcost[j] <= mincost) {
-        mincost = fishcost[j];
-      }
+    if (!window.empty() && window.front() < i - K + 1) {
+      window.pop_front();
     }
 
-    totalcost += mincost;
+    while (!window.empty() && fishcost[window.back()] >= fishcost[i]) {
+      window.pop_back();
+    }
+
+    window.push_back(i);
+
+    totalcost += fishcost[window.front()];
   }
 
   return totalcost;

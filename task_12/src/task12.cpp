@@ -1,7 +1,9 @@
+#include "task12.hpp"
+
 #include <algorithm>
 #include <vector>
 
-int least_amount(int S, int N, std::vector<int>& values) {
+int least_amount(int S, int N, const std::vector<int>& values) {
   std::vector<int> amounts(S + 1, S + 10);
   amounts[0] = 0;
   for (int s = 1; s < S + 1; s++) {

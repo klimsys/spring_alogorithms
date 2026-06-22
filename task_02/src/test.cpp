@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "task2.h"
+#include "task2.hpp"
 
 TEST(Border01, Minimal) {
   std::vector<int> a{0, 1};

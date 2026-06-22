@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 
-#include "task10.h"
+#include "task10.hpp"
 
 TEST(HashTableTests, InsertAndGet) {
   HashTable ht;

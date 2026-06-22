@@ -1,8 +1,7 @@
-#include "task9.h"
-
 #include <algorithm>
 #include <cmath>
 #include <iostream>
+#include <task9.hpp>
 #include <vector>
 
 void Point::print() const {

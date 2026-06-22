@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "task7.h"
+#include "task7.hpp"
 
 TEST(QuickSort, Example1) {
   std::vector<int> v{5, 3, 1, 4, 2};

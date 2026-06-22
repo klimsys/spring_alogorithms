@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "task11.h"
+#include "task11.hpp"
 
 TEST(FindAnagramIndex, FoundAtStart) {
   std::string S = "cbaebabacd";

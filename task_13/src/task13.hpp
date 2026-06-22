@@ -2,4 +2,4 @@
 #include <vector>
 
 std::vector<std::vector<double>> curriculum(
-    int N, std::vector<std::vector<double>>& pairs);
+    int N, const std::vector<std::vector<double>>& pairs);

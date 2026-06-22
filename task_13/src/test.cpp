@@ -2,7 +2,7 @@
 
 #include <vector>
 
-#include "task13.h"
+#include "task13.hpp"
 
 TEST(CurriculumTest, StandardSchedule) {
   std::vector<std::vector<double>> pairs = {

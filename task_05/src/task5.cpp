@@ -1,9 +1,8 @@
-#include "task5.h"
 
 #include <stack>
 #include <vector>
 
-std::vector<int> tem(int N, std::vector<int>& temperatures) {
+std::vector<int> DaysBeforeWarming(int N, std::vector<int>& temperatures) {
   std::vector<int> result(N, 0);
   std::stack<int> st;
 

@@ -1,6 +1,6 @@
 #include <vector>
 
-int Select(std::vector<int>& array, int left, int right, int k) {
+int KSelect(std::vector<int>& array, int left, int right, int k) {
   if (left >= right) {
     return array[left];
   }
@@ -26,14 +26,14 @@ int Select(std::vector<int>& array, int left, int right, int k) {
   }
 
   if (k <= j && left < j) {
-    return Select(array, left, j, k);
+    return KSelect(array, left, j, k);
   }
   if (k >= i && i < right) {
-    return Select(array, i, right, k);
+    return KSelect(array, i, right, k);
   }
   return array[k];
 }
 
-int K(std::vector<int>& array, int left, int right, int k) {
+int Select(std::vector<int>& array, int left, int right, int k) {
   return Select(array, left, right, k - 1);
 }
